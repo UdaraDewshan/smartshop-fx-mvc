@@ -2,10 +2,17 @@ package controller;
 
 import javafx.animation.ScaleTransition;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.io.IOException;
+
 public class WelcomePageController {
+
+    Stage stage = new Stage();
 
     @FXML
     private Button btnGo;
@@ -26,6 +33,13 @@ public class WelcomePageController {
         st.setAutoReverse(true);
         st.setCycleCount(2);
         st.play();
+
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Dashboard.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
 
     }
 
