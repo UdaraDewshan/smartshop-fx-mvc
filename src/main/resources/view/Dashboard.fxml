@@ -63,7 +63,7 @@
                     <font><Font size="20" /></font>
                 </Text>
 
-                <Button fx:id="btnCustomer" styleClass="card-button" text="Open" />
+                <Button fx:id="btnCustomer" onAction="#btnCustomerAction" styleClass="card-button" text="Open" />
             </VBox>
         </StackPane>
 
@@ -82,7 +82,7 @@
                     <font><Font size="20" /></font>
                 </Text>
 
-                <Button fx:id="btnItem" styleClass="card-button" text="Open" />
+                <Button fx:id="btnItem" onAction="#btnItemAction" styleClass="card-button" text="Open" />
             </VBox>
         </StackPane>
 
@@ -106,7 +106,7 @@
                     <font><Font size="20" /></font>
                 </Text>
 
-                <Button fx:id="btnOrder" styleClass="card-button" text="Open" />
+                <Button fx:id="btnOrder" onAction="#btnOrderAction" styleClass="card-button" text="Open" />
             </VBox>
         </StackPane>
 
@@ -127,7 +127,7 @@
                     <font><Font size="20" /></font>
                 </Text>
 
-                <Button fx:id="btnOrderDetail" styleClass="card-button" text="Open" />
+                <Button fx:id="btnOrderDetail" onAction="#btnOrderDetailAction" styleClass="card-button" text="Open" />
             </VBox>
         </StackPane>
 

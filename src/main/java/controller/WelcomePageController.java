@@ -23,7 +23,7 @@ public class WelcomePageController {
     }
 
     @FXML
-    private void handleGoAction() {
+    private void handleGoAction() throws IOException {
 
         ScaleTransition st = new ScaleTransition(Duration.millis(150), btnGo);
         st.setFromX(1.0);
@@ -34,12 +34,12 @@ public class WelcomePageController {
         st.setCycleCount(2);
         st.play();
 
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Dashboard.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        Stage stage = new Stage();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Dashboard.fxml"))));
+        Stage stage1 = (Stage) btnGo.getScene().getWindow();
+        stage1.close();
         stage.show();
+        stage.setTitle("Welcome Page");
 
     }
 
